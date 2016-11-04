@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Xog-2F-5L8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="i9U-so-Ffz">
+            <objects>
+                <navigationController id="Xog-2F-5L8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fq9-ov-Qjo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="mD1-kF-ClI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eIm-gz-sHa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1402" y="34"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NtA-00-9N7">
+                                <rect key="frame" x="37.5" y="119" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RN8-fQ-784"/>
+                                    <constraint firstAttribute="width" constant="300" id="aRx-LY-o8A"/>
+                                </constraints>
+                                <state key="normal" title="用CAShapeLayer重新实现绘图应用"/>
+                                <connections>
+                                    <action selector="popView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hoi-2I-mdC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-zJ-IPe">
+                                <rect key="frame" x="37" y="187" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9Hj-Mp-Hai"/>
+                                    <constraint firstAttribute="width" constant="300" id="zP0-6E-lsB"/>
+                                </constraints>
+                                <state key="normal" title="用Core Graphics实现一个简单的绘图应用"/>
+                                <connections>
+                                    <action selector="popViewb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fCe-OO-k7F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62g-FA-UcY">
+                                <rect key="frame" x="37" y="244" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="sXL-WB-xL8"/>
+                                </constraints>
+                                <state key="normal" title="用Core Graphics 绘制粉笔等图（性能差）"/>
+                                <connections>
+                                    <action selector="popViewc:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jc4-4K-0gT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhG-KD-Xgg">
+                                <rect key="frame" x="37" y="318" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="2Um-Bu-EeS"/>
+                                    <constraint firstAttribute="height" constant="30" id="6fN-4X-VOy"/>
+                                </constraints>
+                                <state key="normal" title="用Core Graphics 绘制粉笔等图（性能好）"/>
+                                <connections>
+                                    <action selector="popViewd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qQR-fs-kwm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NtA-00-9N7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8OY-A1-5Rd"/>
+                            <constraint firstItem="jhG-KD-Xgg" firstAttribute="centerX" secondItem="62g-FA-UcY" secondAttribute="centerX" id="CYX-09-0ba"/>
+                            <constraint firstItem="WmQ-zJ-IPe" firstAttribute="top" secondItem="NtA-00-9N7" secondAttribute="bottom" constant="38" id="KD9-rr-AWT"/>
+                            <constraint firstItem="NtA-00-9N7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="NaY-6a-ACn"/>
+                            <constraint firstItem="62g-FA-UcY" firstAttribute="top" secondItem="WmQ-zJ-IPe" secondAttribute="bottom" constant="27" id="O5i-Wv-6A8"/>
+                            <constraint firstItem="jhG-KD-Xgg" firstAttribute="top" secondItem="62g-FA-UcY" secondAttribute="bottom" constant="44" id="fMU-p7-Pyd"/>
+                            <constraint firstItem="WmQ-zJ-IPe" firstAttribute="centerX" secondItem="NtA-00-9N7" secondAttribute="centerX" id="geN-kJ-0eY"/>
+                            <constraint firstItem="62g-FA-UcY" firstAttribute="centerX" secondItem="WmQ-zJ-IPe" secondAttribute="centerX" id="oxx-Uj-c2F"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eb6-1F-PCm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="35.532233883058474"/>
+        </scene>
+    </scenes>
+</document>

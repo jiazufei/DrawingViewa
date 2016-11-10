@@ -39,6 +39,7 @@
     //this makes our view create a CAShapeLayer
     //instead of a CALayer for its backing layer
     return [CAShapeLayer class];
+    
 }
 
 

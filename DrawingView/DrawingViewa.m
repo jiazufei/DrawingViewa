@@ -26,7 +26,7 @@
         
         //configure the layer
         CAShapeLayer *shapeLayer = (CAShapeLayer *)self.layer;
-        shapeLayer.strokeColor = [UIColor redColor].CGColor;
+        shapeLayer.strokeColor = [UIColor colorWithRed:17.0/255.0 green:102.0/255.0 blue:222.0/255.0 alpha:0.3].CGColor;
         shapeLayer.fillColor = [UIColor clearColor].CGColor;
         shapeLayer.lineJoin = kCALineJoinRound;
         shapeLayer.lineCap = kCALineCapRound;
